@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/mijn-eerste-stylesheet.css">
+  <title>Plaatje wisselen</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html"></a>Over ons</li>
+      <li><a href="onze-liedjes.html">Onze liedjes</a></li>
+      <li><a href="kom-kijken.html">Kom naar ons kijken</a></li>
+      <li><a href="optreden.html">Optreden geven</a></li>
+      <li class="selected">Plaatje wisselen</li>
+    </ul>
+  </nav>
+  <h1>Plaatje wisselen</h1>
+  <p>
+    <img src="afbeeldingen/tijn.png" onclick="swapImage()" id="toon-plaatje" width="180" height="180"/>
+    <p>Klik op het plaatje om hem te veranderen</p>
+  </p>
+  <script>
+    function swapImage(){
+      var imageDisplayed=document.getElementById('toon-plaatje');
+      if (imageDisplayed.src.match("afbeeldingen/tijn.png")){
+        imageDisplayed.src = "afbeeldingen/dino.png";
+      }
+      else{
+        imageDisplayed.src="afbeeldingen/tijn.png";
+      }
+    }
+  </script>
+</body>
+</html>
